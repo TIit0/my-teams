@@ -1,0 +1,37 @@
+// COLORS 
+
+$font-primary:#333333;
+$font-secondary:#4F4F4F;
+$color-white: white;
+
+//breakpoints 
+
+$tab-port: 62.5em; // 1000px
+$tab-brk: 81.25em; //1300px;
+$normal-phone: 46.875em; //750
+
+
+//mixins
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == small-phone {
+        @media only screen and (max-width: 31.25em) {@content}; //500px
+    }
+
+    @if $breakpoint == normal-phone {
+        @media only screen and (max-width: 46.875em) {@content}; //750px
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width:62.5em) {@content}; //1000px
+    }
+
+    @if $breakpoint == tab-brk {
+        @media only screen and (max-width:81.25em) {@content}; //1300px
+    }
+
+
+
+
+}

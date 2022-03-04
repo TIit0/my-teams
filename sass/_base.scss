@@ -1,3 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *,
 *::before,
 *::after {
@@ -8,13 +28,31 @@
 
 
 html {
-    font-size: 62.5%;
+    //this sets the rems on the website
+    font-size: 62.5%;    // 1 rem = 10px; 10px/16px = 62.5%
+
+
+    @include respond(tab-brk) {
+        font-size: 45%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 35%;
+    }
+
+    @include respond(normal-phone) {
+        font-size: 30%;
+    }
+
+    @include respond(small-phone) {
+        font-size: 25%;
+    }
+
 }
 
 
 body {
-    box-sizing: border-box;
-    background-color: aqua;
+    box-sizing: border-box
 }
 
 
